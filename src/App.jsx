@@ -31,7 +31,7 @@ import Loader from './components/loader/Loader';
 import Terms from './components/terms/Terms';
 import Policy from './components/policy/Policy';
 import NotFound from './components/404/NotFound';
-import FirebaseData, { fcmToken, onMessageListener } from './utils/firebase/FirebaseData';
+import FirebaseData, {  onMessageListener } from './utils/firebase/FirebaseData';
 import { Toast } from 'react-bootstrap';
 import Address from './components/address/Address';
 
@@ -116,7 +116,7 @@ function App() {
   });
 
 
-  fcmToken(setTokenFound);
+  // fcmToken(setTokenFound);
   // onMessageListener(set_notification.notification).then(set_notification => {
   //   setShow(true);
   //   setNotification({ title: set_notification.notification[0].title, body: set_notification.notification[0].message })

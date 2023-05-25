@@ -10,7 +10,7 @@ import api from '../../api/api';
 import { motion } from 'framer-motion'
 import { ActionTypes } from '../../model/action-type';
 import ReactSlider from 'react-slider';
-import logoPath from '../../utils/logo_egrocer.svg'
+import logoPath from '../../utils/logo.jpg'
 import Pagination from 'react-js-pagination';
 import { toast } from 'react-toastify'
 import Cookies from 'universal-cookie'

@@ -1,10 +1,10 @@
 const access_key_param = 'x-access-key';
 const access_key = "903361";
 const token_prefix = "Bearer "
-const appUrl = process.env.REACT_APP_API_URL;
-const appSubUrl = process.env.REACT_APP_API_SUBURL;
-// const appUrl = "https://egrocer.netsofters.net";
-// const appSubUrl = '/customer';
+// const appUrl = process.env.REACT_APP_API_URL;
+// const appSubUrl = process.env.REACT_APP_API_SUBURL;
+ const appUrl = "http://admin.agroinsta.com";
+ const appSubUrl = '/customer';
 
 
 const api = {

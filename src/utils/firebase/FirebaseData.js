@@ -22,16 +22,24 @@ const FirebaseData = () => {
   const measurementId = setting.setting && setting.setting.firebase.measurementId;
 
 
+  // const firebaseConfig = {
+  //   apiKey: apiKey,
+  //   authDomain: authDomain,
+  //   projectId: projectId,
+  //   storageBucket: storageBucket,
+  //   messagingSenderId: messagingSenderId,
+  //   appId: appId,
+  //   measurementId: measurementId,
+  // };
   const firebaseConfig = {
-    apiKey: apiKey,
-    authDomain: authDomain,
-    projectId: projectId,
-    storageBucket: storageBucket,
-    messagingSenderId: messagingSenderId,
-    appId: appId,
-    measurementId: measurementId,
+    apiKey: "AIzaSyAGEqiJosyS1sKETbnqVOMVl-afZkhQLi0",
+    authDomain: "farminsta-36505.firebaseapp.com",
+    projectId: "farminsta-36505",
+    storageBucket: "farminsta-36505.appspot.com",
+    messagingSenderId: "735833259805",
+    appId: "1:735833259805:web:976d3360ae85a2e624abf4",
+    measurementId: "G-72JS9REWDT"
   };
-
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
   } else {
@@ -45,31 +53,31 @@ const FirebaseData = () => {
 };
 
 export default FirebaseData;
-export const fcmToken = (setTokenFound) => {
-  const {messaging} = FirebaseData()
-  // return getToken(messaging, {vapidKey: 'BEi3E10PuFA0QiE3VyZcGCIWSJVxAT3iYHDqq9U8RPF3d43sZZkRnuTzJAZFk3UZDa2zDcrwMEV41cRjtVs8lLc'}).then((currentToken) => {
-  //   if (currentToken) {
-  //     console.log(currentToken)
-  //     setTokenFound(true);
-  //     // Track the token -> client mapping, by sending to backend server
-  //     // show on the UI that permission is secured
-  //   } else {
-  //     console.log('No registration token available. Request permission to generate one.');
-  //     setTokenFound(false);
+// export const fcmToken = (setTokenFound) => {
+//   const {messaging} = FirebaseData()
+//   // return getToken(messaging, {vapidKey: 'BEi3E10PuFA0QiE3VyZcGCIWSJVxAT3iYHDqq9U8RPF3d43sZZkRnuTzJAZFk3UZDa2zDcrwMEV41cRjtVs8lLc'}).then((currentToken) => {
+//   //   if (currentToken) {
+//   //     console.log(currentToken)
+//   //     setTokenFound(true);
+//   //     // Track the token -> client mapping, by sending to backend server
+//   //     // show on the UI that permission is secured
+//   //   } else {
+//   //     console.log('No registration token available. Request permission to generate one.');
+//   //     setTokenFound(false);
       
-  //   }
-  // }).catch((err) => {
-  //   console.log('An error occurred while retrieving token. ', err);
-  //   // catch error while creating client token
-  // });
-  return "hi"
-}
-export const onMessageListener = () =>{
+//   //   }
+//   // }).catch((err) => {
+//   //   console.log('An error occurred while retrieving token. ', err);
+//   //   // catch error while creating client token
+//   // });
+//   return "hi"
+// }
+// export const onMessageListener = () =>{
   
-  // new Promise((resolve) => {
-  //   const {messaging} = FirebaseData()
-  //   onMessage(messaging, (payload) => {
-  //     resolve(payload);
-  //   });
-  // });
-}
+//   // new Promise((resolve) => {
+//   //   const {messaging} = FirebaseData()
+//   //   onMessage(messaging, (payload) => {
+//   //     resolve(payload);
+//   //   });
+//   // });
+// }
