@@ -3,7 +3,7 @@ const access_key = "903361";
 const token_prefix = "Bearer "
 // const appUrl = process.env.REACT_APP_API_URL;
 // const appSubUrl = process.env.REACT_APP_API_SUBURL;
- const appUrl = "http://admin.agroinsta.com";
+ const appUrl = "https://admin.agroinsta.com";
  const appSubUrl = '/customer';
 
 
