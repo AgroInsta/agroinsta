@@ -2,7 +2,7 @@
   "name": "",
   "version": "0.1.0",
   "private": true,
-  "homepage": "agroinsta.com",
+  "homepage": "",
   "dependencies": {
     "@paystack/inline-js": "^2.12.6",
     "@react-google-maps/api": "^2.17.1",
