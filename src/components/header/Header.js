@@ -564,7 +564,6 @@ const Header = () => {
                                                     <span className='pe-3'>Login</span>
                                                 </div>
                                             </div>
-                                            <FloatingIcon/>
 
                                         </div>
                                     )
@@ -577,7 +576,6 @@ const Header = () => {
                                                 </div>
                                                 <img src={user.user.profile} alt="user"></img>
                                             </Link>
-                                            <FloatingIcon/>
                                         </div>
                                     )}
 
@@ -587,6 +585,7 @@ const Header = () => {
                     </div>
                 </div>
 
+                <FloatingIcon/>
 
                 {/* Mobile bottom Nav */}
                 <nav className='header-mobile-nav'>
