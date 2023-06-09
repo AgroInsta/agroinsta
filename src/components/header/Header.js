@@ -22,6 +22,7 @@ import Cookies from 'universal-cookie'
 import Cart from '../cart/Cart';
 import { toast } from 'react-toastify';
 import Favorite from '../favorite/Favorite';
+import FloatingIcon from '../ticket/Ticket';
 // import $ from 'jquery';
 // import { FaRegUserCircle } from 'react-icons/fa';
 
@@ -210,6 +211,7 @@ const Header = () => {
                                 <div className='d-flex flex-row gap-2'>
                                     <div className='icon location p-1 m-auto'>
                                         <GoLocation />
+
                                     </div>
                                     <div className='d-flex flex-column flex-grow-1'>
                                         <span className='location-description'>Deliver to <IoMdArrowDropdown /></span>
@@ -562,6 +564,7 @@ const Header = () => {
                                                     <span className='pe-3'>Login</span>
                                                 </div>
                                             </div>
+                                            <FloatingIcon/>
 
                                         </div>
                                     )
@@ -574,6 +577,7 @@ const Header = () => {
                                                 </div>
                                                 <img src={user.user.profile} alt="user"></img>
                                             </Link>
+                                            <FloatingIcon/>
                                         </div>
                                     )}
 
