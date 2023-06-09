@@ -5,7 +5,7 @@ import './ticket.css';
 const FloatingIcon = () => {
     return (
       <div className="floating-icon">
-       <a href="https://ticket.agroinsta.com" target="_blank"><FaTicketAlt color='red' className="icon" /></a> 
+       <a href="https://ticket.agroinsta.com" target="_blank"><FaTicketAlt color='red !important' className="icon" /></a> 
       </div>
     );
   };
