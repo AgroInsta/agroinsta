@@ -23,14 +23,24 @@ const FirebaseData = () => {
   const measurementId = setting.setting && setting.setting.firebase.measurementId;
 
 
+  // const firebaseConfig = {
+  //   apiKey: apiKey,
+  //   authDomain: authDomain,
+  //   projectId: projectId,
+  //   storageBucket: storageBucket,
+  //   messagingSenderId: messagingSenderId,
+  //   appId: appId,
+  //   measurementId: measurementId,
+  // };
+
   const firebaseConfig = {
-    apiKey: apiKey,
-    authDomain: authDomain,
-    projectId: projectId,
-    storageBucket: storageBucket,
-    messagingSenderId: messagingSenderId,
-    appId: appId,
-    measurementId: measurementId,
+    apiKey: "AIzaSyAGEqiJosyS1sKETbnqVOMVl-afZkhQLi0",
+    authDomain: "farminsta-36505.firebaseapp.com",
+    projectId: "farminsta-36505",
+    storageBucket: "farminsta-36505.appspot.com",
+    messagingSenderId: "735833259805",
+    appId: "1:735833259805:web:976d3360ae85a2e624abf4",
+    measurementId: "G-72JS9REWDT"
   };
 
   if (!firebase.apps.length) {
