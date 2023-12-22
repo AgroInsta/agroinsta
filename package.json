@@ -1,8 +1,8 @@
 {
-  "name": "your app name with no space in small letters",
+  "name": "AgroInsta",
   "version": "1.9.5",
   "private": true,
-  "homepage": "your website URL (blank if working in localhost)",
+  "homepage": "https://agroinsta.com",
   "dependencies": {
     "@paypal/react-paypal-js": "^8.1.3",
     "@paystack/inline-js": "^2.13.0",
