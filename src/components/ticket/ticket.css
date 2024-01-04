@@ -1,0 +1,25 @@
+/* FloatingIcon.css */
+.floating-icon {
+  position: fixed;
+  bottom: 70px; /* Adjust the position as needed */
+  right: 20px; /* Adjust the position as needed */
+  z-index: 9999; /* Ensure the icon stays on top of other elements */
+  animation: float 3s infinite;
+}
+
+.icon {
+  font-size: 44px; /* Adjust the size as needed */
+  color: red !important;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px); /* Adjust the floating height */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
