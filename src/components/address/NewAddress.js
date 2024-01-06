@@ -36,7 +36,7 @@ const NewAddress = (props) => {
         area: '',
         pincode: '',
         state: '',
-        country: 'India',
+        country: '',
         address_type: 'Home',
         is_default: false,
     });
@@ -124,7 +124,7 @@ const NewAddress = (props) => {
                             area: '',
                             pincode: '',
                             state: '',
-                            country: 'India',
+                            country: '',
                             address_type: 'Home',
                             is_default: false,
                         });
@@ -155,7 +155,7 @@ const NewAddress = (props) => {
                     if (result.status === 1) {
                         toast.success('Succesfully Updated Address!');
                         props.setIsAddressSelected(false);
-                        setaddressDetails({ name: '', mobile_num: '', alternate_mobile_num: '', address: '', landmark: '', city: '', area: '', pincode: '', state: '', country: 'India', address_type: 'Home', is_default: false, });
+                        setaddressDetails({ name: '', mobile_num: '', alternate_mobile_num: '', address: '', landmark: '', city: '', area: '', pincode: '', state: '', country: '', address_type: 'Home', is_default: false, });
                         setisconfirmAddress(false);
                         api.getAddress(cookies.get('jwt_token'))
                             .then(resp => resp.json())
@@ -351,7 +351,7 @@ const NewAddress = (props) => {
                                     city: "",
                                     area: "",
                                     pincode: "",
-                                    country: "India",
+                                    country: "",
                                     state: "",
                                 }));
                                 toast.error(res.message);
@@ -401,7 +401,7 @@ const NewAddress = (props) => {
                                             area: '',
                                             pincode: '',
                                             state: '',
-                                            country: 'India',
+                                            country: '',
                                             address_type: 'Home',
                                             is_default: false,
                                         });
@@ -434,7 +434,7 @@ const NewAddress = (props) => {
                                         <>
                                             <div className="">
 
-                                                <form onSubmit={(e) => { handleAddnewAddress(); }} className='address-details-wrapper'>
+                                                <form onSubmit={(e) => { e.preventDefault(); handleConfirmAddress(); }} className='address-details-wrapper'>
 
                                                     <div className='contact-detail-container'>
                                                         <h3>{t("contact_details")}</h3>
@@ -481,31 +481,15 @@ const NewAddress = (props) => {
 
                                                                 setaddressDetails(state => ({ ...state, pincode: e.target.value }));
                                                             }} required></input>
-                                                            {/* <input type='text' className='disabled' style={{ width: "100%" }} required value={addressDetails.city} placeholder={t('enter_city')} ></input> */}
-                                                            <select
-                                                                style={{ width: "100%" }}
-                                                                value={addressDetails.city}
-                                                                onChange={(e) => {
-                                                                    setaddressDetails(state => ({ ...state, city: e.target.value }));
-                                                                }}
-                                                                required
-                                                                >
-                                                                <option value="" disabled>
-                                                                    {t('enter_city')}
-                                                                </option>
-                                                                <option value="Guntur">Guntur</option>
-                                                                <option value="Hyderabad">Hyderabad</option>
-                                                                <option value="Kondapur">Kondapur</option>
-                                                                <option value="Miyapur">Miyapur</option>
-                                                            </select>
+                                                            <input type='text' className='disabled' style={{ width: "100%" }} required value={addressDetails.city} placeholder={t('enter_city')} ></input>
                                                             <input type='text' style={{ width: "100%" }} placeholder={t('enter_state')} value={addressDetails.state} onChange={(e) => {
 
                                                                 setaddressDetails(state => ({ ...state, state: e.target.value }));
                                                             }} required></input>
-                                                            {/* <input type='text' style={{ width: "100%" }} placeholder={t("enter_country")} value={addressDetails.country} onChange={(e) => {
+                                                            <input type='text' style={{ width: "100%" }} placeholder={t("enter_country")} value={addressDetails.country} onChange={(e) => {
 
                                                                 setaddressDetails(state => ({ ...state, country: e.target.value }));
-                                                            }} required></input> */}
+                                                            }} required></input>
                                                         </div>
                                                     </div>
 
@@ -542,10 +526,8 @@ const NewAddress = (props) => {
                                                             {t("set_as_default_address")}
                                                         </div>
                                                     </div>
-                                                    {isconfirmAddress
-                                                        ? <button type='button' className='confirm-address' onClick={() => handleConfirmAddress()}>Confirm Address</button>
-                                                        : <button type='submit'>Add New Address</button>}
-                                                    {/* <button type='submit' className='confirm-address' >{t("confirm_location")}</button> */}
+
+                                                    <button type='submit' className='confirm-address' >{t("confirm_location")}</button>
 
 
                                                 </form>
