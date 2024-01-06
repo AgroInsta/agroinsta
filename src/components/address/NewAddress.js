@@ -434,7 +434,7 @@ const NewAddress = (props) => {
                                         <>
                                             <div className="">
 
-                                                <form onSubmit={(e) => { e.preventDefault(); handleAddnewAddress(); }} className='address-details-wrapper'>
+                                                <form onSubmit={(e) => { handleAddnewAddress(); }} className='address-details-wrapper'>
 
                                                     <div className='contact-detail-container'>
                                                         <h3>{t("contact_details")}</h3>
