@@ -36,7 +36,7 @@ const NewAddress = (props) => {
         area: '',
         pincode: '',
         state: '',
-        country: '',
+        country: 'India',
         address_type: 'Home',
         is_default: false,
     });
@@ -401,7 +401,7 @@ const NewAddress = (props) => {
                                             area: '',
                                             pincode: '',
                                             state: '',
-                                            country: '',
+                                            country: 'India',
                                             address_type: 'Home',
                                             is_default: false,
                                         });
@@ -434,7 +434,7 @@ const NewAddress = (props) => {
                                         <>
                                             <div className="">
 
-                                                <form onSubmit={(e) => { e.preventDefault(); handleConfirmAddress(); }} className='address-details-wrapper'>
+                                                <form onSubmit={(e) => { e.preventDefault(); handleAddnewAddress(); }} className='address-details-wrapper'>
 
                                                     <div className='contact-detail-container'>
                                                         <h3>{t("contact_details")}</h3>
@@ -526,8 +526,10 @@ const NewAddress = (props) => {
                                                             {t("set_as_default_address")}
                                                         </div>
                                                     </div>
-
-                                                    <button type='submit' className='confirm-address' >{t("confirm_location")}</button>
+                                                    {isconfirmAddress
+                                                        ? <button type='button' className='confirm-address' onClick={() => handleConfirmAddress()}>Confirm Address</button>
+                                                        : <button type='submit'>Add New Address</button>}
+                                                    {/* <button type='submit' className='confirm-address' >{t("confirm_location")}</button> */}
 
 
                                                 </form>
